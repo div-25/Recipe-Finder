@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<link rel="greenIconIcon" href="greenIcon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="greenIcon.ico?v=2">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv=“Pragma” content=”no-cache”>
+<meta http-equiv=“Expires” content=”-1″>
+<meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+<!-- CSS Stylesheets -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="css/recipefinder.css?v=1">
+
+<title>Recipe Finder</title>
+
+</head>
+
+<body>
+
+<img class="hero" src="images/board-bunch-cooking-food-wide.jpg" alt="board-bunch-cooking-food-wide">
+
+<h1 class='section-heading'>Recipe Finder</h1>
+<h2 class='section-subheading'>Search Your Next Recipe</h2>
+
+<div class="section-description">
+
+  <p class="section-subheading">
+    <form id="query-form">
+      <div>
+        <label for="ingredients">Ingredients (optional):</label><input class="textfield" id="ingredients" type="text" name="ingredients" placeholder="e.g. potato" onChange="sanitizeInputs()" />
+      </div>
+      <div>
+        <label for="contains">Dish Name (optional):</label><input class="textfield" id="contains" type="text" name="contains" placeholder="e.g. paneer butter masala" onChange="sanitizeInputs()" /></div>
+      <div class="button">
+        <br />
+        <input class="button" type="button" value="Reset" id="resetButton" onClick="this.form.reset();resetResults()" />
+        <input class="button" type="submit" value="Search ..." id="searchButton" />
+      </div>
+    </form>
+  </p>
+
+<div class="section-subheading" id="search-results-heading"></div>
+<div class="results-div" id="results"></div>
+
+</body>
+
+<footer>
+
+  <br />
+  <p><code class="copyright-text">Search powered by <a href="http://www.recipepuppy.com/about/api/" target= "_blank">🐶 Recipe Puppy</a></code></p>
+
+</footer>
+
+<!-- JQuery Scripts -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!-- Our codes -->
+<script src="js/recipefinder.js?v=1"></script>
+
+</html>
